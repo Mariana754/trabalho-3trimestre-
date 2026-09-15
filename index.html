@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mural de Ações do Bairro</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Cabeçalho -->
+    <header>
+        <h1>Ações do Bairro</h1>
+        <nav>
+            <ul>
+                <li><a href="#sobre">Sobre</a></li>
+                <li><a href="#cadastro">Cadastrar</a></li>
+                <li><a href="#mural">Mural</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Banner principal com imagem de fundo -->
+    <section class="hero">
+        <div class="hero-texto">
+            <h2>Pequenas atitudes transformam nossa comunidade.</h2>
+        </div>
+    </section>
+
+    <!-- Explicação do Problema -->
+    <section id="sobre" class="conteudo">
+        <h2>O Problema e Nossa Proposta</h2>
+        <p>Muitas iniciativas locais se perdem por falta de divulgação. Nosso objetivo é conectar moradores para organizar mutirões, doações e coletas de forma simples.</p>
+        
+        <div class="galeria">
+            <figure>
+                <img src="imagens/foto1.jpg" alt="Moradores reunidos na praça do bairro">
+                <figcaption>Reunião de moradores organizando o espaço comunitário.</figcaption>
+            </figure>
+            <figure>
+                <img src="imagens/foto2.jpg" alt="Ponto de coleta de recicláveis">
+                <figcaption>Ponto de descarte que precisa de apoio constante.</figcaption>
+            </figure>
+        </div>
+    </section>
+
+    <!-- Formulário de Cadastro -->
+    <section id="cadastro" class="conteudo">
+        <h2>Cadastrar Nova Ação</h2>
+        <form id="form-acao">
+            <label for="titulo">Título da Ação:</label>
+            <input type="text" id="titulo" required placeholder="Ex: Mutirão de Limpeza">
+
+            <label for="categoria">Categoria:</label>
+            <select id="categoria" required>
+                <option value="">Selecione...</option>
+                <option value="Mutirão">Mutirão</option>
+                <option value="Doação">Doação</option>
+                <option value="Coleta">Coleta</option>
+            </select>
+
+            <label for="responsavel">Organizador:</label>
+            <input type="text" id="responsavel" required placeholder="Seu nome ou grupo">
+
+            <label for="descricao">Descrição:</label>
+            <textarea id="descricao" rows="4" required placeholder="Descreva o que será feito e como participar..."></textarea>
+
+            <button type="submit">Salvar Ação</button>
+        </form>
+    </section>
+
+    <!-- Lista/Mural de Registros -->
+    <section id="mural" class="conteudo">
+        <h2>Mural da Comunidade</h2>
+        <div id="contador">Total de ações cadastradas: <span>0</span></div>
+        <div id="lista" class="grid-cartoes">
+            <!-- Os cartões cadastrados vão aparecer aqui via JavaScript -->
+        </div>
+    </section>
+
+    <!-- Rodapé -->
+    <footer>
+        <p>Projeto de Responsabilidade Social e Ambiental - 2º Ano do Ensino Médio</p>
+        <p>Desenvolvido pela Equipe | Escola Modelo</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
