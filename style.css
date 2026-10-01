@@ -1,15 +1,16 @@
 /* =========================================================
-   style.css - Identidade Visual Sustentável (Verde & Laranja)
+   style.css
+   Estilos visuais, cores e layout do site NutriVida.
    ========================================================= */
 
 :root{
-  --tinta:  #1b2e23;   /* Texto escuro, tom de verde floresta fechado */
-  --papel:  #f4f7f4;   /* Fundo suave com tom mente claro */
-  --marca:  #2d6a4f;   /* Verde principal sustentável */
-  --sinal:  #e76f51;   /* Laranja terracota para botões e destaques */
-  --alerta: #bc4749;   /* Vermelho para avisos e apagar */
-  --borda:  #c2d5c6;   /* Linhas de divisão suaves */
-  --largura: 1080px;   /* Largura máxima do conteúdo */
+  --tinta:  #1b3022;   /* cor do texto principal (verde escuro) */
+  --papel:  #f4f6f0;   /* fundo da página */
+  --marca:  #2d6a4f;   /* cor principal, botões e barras */
+  --sinal:  #d4a373;   /* cor de destaque */
+  --alerta: #bc4749;   /* cor de apagar / perigo */
+  --borda:  #ccd5ae;
+  --largura: 1080px;   /* largura máxima do conteúdo */
 }
 
 *{ box-sizing: border-box; margin: 0; padding: 0; }
@@ -44,12 +45,12 @@ a{ color: var(--marca); }
 }
 .marca{ color: #fff; font-weight: 700; font-size: 1.2rem; }
 .topo nav{ display: flex; gap: 1.2rem; }
-.topo nav a{ color: #d8ddd6; text-decoration: none; font-size: .95rem; }
+.topo nav a{ color: #e9edc9; text-decoration: none; font-size: .95rem; }
 .topo nav a:hover{ color: var(--sinal); }
 
 /* --------- CAPA --------- */
 .capa{ position: relative; background: var(--tinta); }
-.capa img{ width: 100%; height: 400px; object-fit: cover; opacity: .45; }
+.capa img{ width: 100%; height: 420px; object-fit: cover; opacity: .45; }
 .capa-texto{
   position: absolute; inset: 0;
   max-width: var(--largura); margin: 0 auto; padding: 2rem 1.2rem;
@@ -57,18 +58,18 @@ a{ color: var(--marca); }
   align-items: flex-start; gap: 1rem; color: #fff;
 }
 .capa-texto h1{ max-width: 18ch; }
-.capa-texto p{ max-width: 50ch; }
+.capa-texto p{ max-width: 48ch; color: #e9edc9; }
 
-/* --------- BOTÕES --------- */
+/* --------- BOTOES --------- */
 .botao{
-  display: inline-block; background: var(--sinal); color: #fff;
+  display: inline-block; background: var(--marca); color: #fff;
   border: none; padding: .75rem 1.4rem; font-size: 1rem; font-weight: 700;
-  text-decoration: none; cursor: pointer; border-radius: 4px;
+  text-decoration: none; cursor: pointer;
 }
-.botao:hover{ background: #f4a261; color: var(--tinta); }
+.botao:hover{ background: #40916c; }
 .botao-fino{
-  background: #fff; border: 1px solid var(--borda); color: var(--tinta);
-  padding: .4rem .8rem; font-size: .85rem; cursor: pointer; border-radius: 4px;
+  background: none; border: 1px solid var(--borda); color: var(--tinta);
+  padding: .4rem .8rem; font-size: .85rem; cursor: pointer;
 }
 .botao-fino:hover{ background: var(--borda); }
 .botao-fino.perigo{ border-color: var(--alerta); color: var(--alerta); }
@@ -76,7 +77,7 @@ a{ color: var(--marca); }
 
 a:focus-visible, button:focus-visible, input:focus-visible,
 select:focus-visible, textarea:focus-visible, label:focus-visible{
-  outline: 3px solid var(--marca); outline-offset: 2px;
+  outline: 3px solid var(--sinal); outline-offset: 2px;
 }
 
 /* --------- BLOCOS --------- */
@@ -93,24 +94,25 @@ select:focus-visible, textarea:focus-visible, label:focus-visible{
 .galeria img{ height: 220px; object-fit: cover; width: 100%; border-radius: 4px; }
 figcaption{
   font-size: .85rem; margin-top: .5rem;
-  border-left: 4px solid var(--sinal); padding-left: .6rem;
+  border-left: 4px solid var(--marca); padding-left: .6rem;
 }
 
-/* --------- PAINEL DE NÚMEROS --------- */
+/* --------- PAINEL DE NUMEROS --------- */
 .painel{
   display: grid; gap: 1rem; margin-top: 1rem;
   grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
 }
 .numero{
   background: #fff; border: 1px solid var(--borda);
-  border-top: 5px solid var(--marca); padding: 1rem; border-radius: 4px;
+  border-top: 5px solid var(--marca); padding: 1rem;
+  border-radius: 4px;
 }
-.numero b{ display: block; font-size: 2.1rem; line-height: 1; }
+.numero b{ display: block; font-size: 2.1rem; line-height: 1; color: var(--marca); }
 .numero span{ font-size: .8rem; color: #55605a; }
 .numero.pequeno{ border-top-color: var(--sinal); }
-.numero.pequeno b{ font-size: 1.4rem; }
+.numero.pequeno b{ font-size: 1.4rem; color: #b08968; }
 
-/* --------- FORMULÁRIO --------- */
+/* --------- FORMULARIO --------- */
 .formulario{
   display: grid; gap: 1rem; max-width: 760px;
   grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
@@ -123,7 +125,7 @@ input, select, textarea{
   background: #fff; color: var(--tinta); border-radius: 4px;
 }
 .formulario .botao{ grid-column: 1 / -1; justify-self: start; }
-.aviso{ grid-column: 1 / -1; font-size: .9rem; color: var(--marca); min-height: 1.4em; font-weight: bold; }
+.aviso{ grid-column: 1 / -1; font-size: .9rem; color: var(--marca); min-height: 1.4em; font-weight: 600; }
 
 /* --------- FERRAMENTAS DO MURAL --------- */
 .ferramentas{
@@ -134,7 +136,7 @@ input, select, textarea{
 .grupo-botoes{ display: flex; gap: .4rem; flex-wrap: wrap; }
 .grupo-botoes label{ cursor: pointer; }
 
-/* --------- CARTÕES --------- */
+/* --------- CARTOES --------- */
 .lista{
   display: grid; gap: 1rem;
   grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
@@ -142,14 +144,11 @@ input, select, textarea{
 .cartao{
   background: #fff; border: 1px solid var(--borda);
   border-left: 6px solid var(--marca); padding: 1rem;
-  display: flex; flex-direction: column; gap: .5rem; border-radius: 4px;
+  display: flex; flex-direction: column; gap: .5rem;
+  border-radius: 4px;
 }
 .cartao p{ font-size: .92rem; }
-.tag-acao{
-  display: inline-block; background: var(--sinal); color: #fff;
-  font-size: .75rem; font-weight: bold; padding: .2rem .5rem; border-radius: 3px; align-self: flex-start;
-}
-.etiqueta{ font-size: .8rem; font-weight: 700; color: #55605a; }
+.etiqueta{ font-size: .75rem; font-weight: 700; color: var(--marca); background: #e9edc9; width: max-content; padding: .1rem .4rem; border-radius: 3px; }
 .cartao footer{
   display: flex; justify-content: space-between; align-items: center;
   gap: .5rem; margin-top: auto; padding-top: .5rem;
@@ -163,16 +162,17 @@ input, select, textarea{
 .vazio{
   grid-column: 1 / -1; padding: 2rem; text-align: center;
   border: 2px dashed var(--borda); color: #55605a; background: #fff;
+  border-radius: 4px;
 }
 
-/* --------- RODAPÉ --------- */
-.rodape{ background: var(--tinta); color: #d8ddd6; padding: 2rem 1.2rem; text-align: center; }
-.miudo{ font-size: .8rem; color: #97a19b; margin-top: .4rem; }
+/* --------- RODAPE --------- */
+.rodape{ background: var(--tinta); color: #e9edc9; padding: 2rem 1.2rem; text-align: center; }
+.miudo{ font-size: .8rem; color: #b7b7a4; margin-top: .4rem; }
 
 /* --------- CELULAR --------- */
 @media (max-width: 640px){
   h1{ font-size: 1.7rem; }
-  .capa img{ height: 320px; }
+  .capa img{ height: 340px; }
   .bloco{ padding: 2rem 1rem; }
   .ferramentas{ flex-direction: column; align-items: stretch; }
 }

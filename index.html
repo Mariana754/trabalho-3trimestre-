@@ -3,142 +3,114 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>EcoTroca & Doação — Moda Circular</title>
-  <meta name="description" content="Plataforma comunitária para doação e troca de roupas sustentável.">
+  <title>NutriVida - Emagrecimento e Saúde</title>
+  <meta name="description" content="Plataforma de apoio para reeducação alimentar, dietas equilibradas e acompanhamento de peso.">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
 <header class="topo">
   <div class="faixa">
-    <p class="marca">EcoTroca & Doação</p>
+    <p class="marca">NutriVida</p>
     <nav>
-      <a href="#problema">O Projeto</a>
-      <a href="#cadastrar">Anunciar Peça</a>
-      <a href="#mural">Mural de Roupas</a>
+      <a href="#problema">O Desafio</a>
+      <a href="#cadastrar">Cadastrar Meta/Dieta</a>
+      <a href="#mural">Mural de Acompanhamento</a>
     </nav>
   </div>
 </header>
 
 <section class="capa">
-  <img src="imagens/capa.jpg" alt="Roupas organizadas em cabides para doação e troca">
+  <img src="imagens/capa.jpg" alt="Prato saudável com salada colorida e alimentos frescos">
   <div class="capa-texto">
-    <h1>Sua roupa usada tem valor para alguém. Doe ou Troque!</h1>
-    <p>Conectamos pessoas para dar um novo destino a roupas em bom estado, incentivando a moda circular e a solidariedade no nosso bairro.</p>
-    <a class="botao" href="#cadastrar">Anunciar Peça Agora</a>
+    <h1>Transforme sua saúde com planejamento e constância</h1>
+    <p>Ajudamos você a alcançar o peso ideal com reeducação alimentar prática e acompanhamento real.</p>
+    <a class="botao" href="#cadastrar">Começar agora</a>
   </div>
 </section>
 
 <main>
 
 <section id="problema" class="bloco">
-  <h2>O Problema e Nossa Solução</h2>
-  <p class="largura-texto">Muitas roupas em perfeito estado ficam esquecidas no guarda-roupa enquanto outras pessoas precisam de vestuário ou gostariam de renovar o visual sem gastar nada.</p>
-  <p class="largura-texto"><b>Quem sofre com isso:</b> Pessoas e famílias da comunidade que precisam de acesso facilitado a vestuário de qualidade e quem deseja praticar o consumo sustentável.</p>
-  <p class="largura-texto"><b>Onde acontece:</b> Na nossa escola, bairro e comunidade local.</p>
+  <h2>O Desafio</h2>
+  <p class="largura-texto">Muitas pessoas querem emagrecer, mas iniciam dietas restritivas sem orientação profissional, acabam desistindo por frustração e recuperam o peso perdido.</p>
+  <p class="largura-texto"><b>Quem sofre com isso:</b> Jovens e adultos que tentam emagrecer sozinhos e se perdem em meio a tantas informações desencontradas na internet.</p>
+  <p class="largura-texto"><b>Onde acontece:</b> No dia a dia de quem busca uma vida mais saudável em nossa comunidade.</p>
   <div class="galeria">
     <figure>
-      <img src="imagens/foto1.jpg" alt="Cabideiro com roupas doadas">
-      <figcaption>Ponto de arrecadação e organização de doações.</figcaption>
+      <img src="imagens/foto1.jpg" alt="Alimentos frescos e naturais em uma mesa de cozinha">
+      <figcaption>Refeições balanceadas priorizando comida de verdade.</figcaption>
     </figure>
     <figure>
-      <img src="imagens/foto2.jpg" alt="Pessoas trocando peças de roupas em evento comunitário">
-      <figcaption>Encontro de trocas e moda circular no bairro.</figcaption>
+      <img src="imagens/foto2.jpg" alt="Pessoa praticando atividade física ao ar livre">
+      <figcaption>Apoio à constância em hábitos saudáveis diários.</figcaption>
     </figure>
   </div>
 </section>
 
 <section class="bloco">
-  <h2>Impacto do Projeto</h2>
-  <p class="largura-texto"><b>Indicador principal:</b> Número de peças de roupas cadastradas para doação ou troca em 4 semanas.</p>
+  <h2>Os Números do Projeto</h2>
+  <p class="largura-texto">Indicador: número de registros de metas e dietas cadastradas por usuários em 4 semanas.</p>
   <div class="painel" id="painel"></div>
 </section>
 
 <section id="cadastrar" class="bloco">
-  <h2>Cadastrar Roupas (Doação ou Troca)</h2>
+  <h2>Registrar Meta ou Dieta</h2>
   <form id="formulario" class="formulario">
     <div class="campo">
-      <label for="tituloDaAcao">Nome/Título da Peça</label>
-      <input type="text" id="tituloDaAcao" placeholder="Ex: Jaqueta Jeans Escura" maxlength="80" required>
+      <label for="tituloDaAcao">Título da Meta ou Refeição</label>
+      <input type="text" id="tituloDaAcao" maxlength="80" required placeholder="Ex: Dieta Low Carb Semanal">
     </div>
-    
-    <div class="campo">
-      <label for="tipoAcao">Tipo de Ação</label>
-      <select id="tipoAcao" required>
-        <option value="">Selecione...</option>
-        <option>Doação</option>
-        <option>Troca</option>
-      </select>
-    </div>
-
     <div class="campo">
       <label for="categoria">Categoria</label>
       <select id="categoria" required>
-        <option value="">Selecione...</option>
-        <option>Camisas e Camisetas</option>
-        <option>Calças e Bermudas</option>
-        <option>Casacos e Agasalhos</option>
-        <option>Calçados</option>
-        <option>Acessórios</option>
-        <option>Outros</option>
+        <option>Emagrecimento</option>
+        <option>Reeducação</option>
+        <option>Exercício</option>
+        <option>Hidratação</option>
       </select>
     </div>
-
     <div class="campo">
-      <label for="tamanho">Tamanho</label>
-      <select id="tamanho" required>
-        <option value="">Selecione...</option>
-        <option>PP</option>
-        <option>P</option>
-        <option>M</option>
-        <option>G</option>
-        <option>GG</option>
-        <option>Infantil</option>
-        <option>Único</option>
-      </select>
+      <label for="local">Foco / Refeição</label>
+      <input type="text" id="local" maxlength="80" required placeholder="Ex: Almoço / Café da manhã">
     </div>
-
     <div class="campo">
-      <label for="local">Ponto de Retirada / Contato</label>
-      <input type="text" id="local" placeholder="Ex: Retirar na Escola - Sala 3" maxlength="80" required>
+      <label for="quantasPessoasParticipar">Calorias Estimadas (kcal)</label>
+      <input type="number" id="quantasPessoasParticipar" min="0" step="1" required placeholder="Ex: 500">
     </div>
-
     <div class="campo largo">
-      <label for="oQueFoiFeito">Descrição e Estado de Conservação</label>
-      <textarea id="oQueFoiFeito" rows="3" placeholder="Ex: Sem rasgos, pouco usada, troco por camiseta equivalente ou doação livre." maxlength="300" required></textarea>
+      <label for="oQueFoiFeito">Descrição detalhada</label>
+      <textarea id="oQueFoiFeito" rows="3" maxlength="300" required placeholder="Descreva os alimentos, porções ou metas cumpridas..."></textarea>
     </div>
-
-    <button type="submit" class="botao">Salvar Anúncio</button>
+    <button type="submit" class="botao">Salvar Registro</button>
     <p id="aviso" class="aviso" role="status"></p>
   </form>
 </section>
 
 <section id="mural" class="bloco">
-  <h2>Mural de Peças Disponíveis</h2>
+  <h2>Mural de Acompanhamento</h2>
   <div class="ferramentas">
     <div class="ferramenta">
-      <label for="busca">Buscar peça</label>
-      <input type="text" id="busca" placeholder="Digite uma palavra (ex: casaco)">
+      <label for="busca">Buscar</label>
+      <input type="text" id="busca" placeholder="digite uma palavra">
     </div>
     <div class="ferramenta">
-      <label for="filtro">Filtrar por Categoria</label>
+      <label for="filtro">Categoria</label>
       <select id="filtro">
-        <option value="todas">Todas as categorias</option>
-        <option>Camisas e Camisetas</option>
-        <option>Calças e Bermudas</option>
-        <option>Casacos e Agasalhos</option>
-        <option>Calçados</option>
-        <option>Acessórios</option>
-        <option>Outros</option>
+        <option value="todas">Todas</option>
+        <option>Emagrecimento</option>
+        <option>Reeducação</option>
+        <option>Exercício</option>
+        <option>Hidratação</option>
       </select>
     </div>
     <div class="ferramenta">
-      <label for="exportar">Gerenciar Dados</label>
+      <label for="exportar">Dados</label>
       <div class="grupo-botoes">
-        <button type="button" id="exportar" class="botao-fino">Baixar Backup</button>
-        <label for="importar" class="botao-fino">Carregar Backup</label>
+        <button type="button" id="exportar" class="botao-fino">Baixar</button>
+        <label for="importar" class="botao-fino">Carregar</label>
         <input type="file" id="importar" accept="application/json" hidden>
-        <button type="button" id="limpar" class="botao-fino perigo">Apagar Tudo</button>
+        <button type="button" id="limpar" class="botao-fino perigo">Apagar tudo</button>
       </div>
     </div>
   </div>
@@ -148,8 +120,8 @@
 </main>
 
 <footer class="rodape">
-  <p>Projeto Desenvolvido pela Equipe de Programação | Turma 2º Ano | Escola Técnica</p>
-  <p class="miudo">ODS 12: Consumo e Produção Responsáveis. Protótipo escolar com armazenamento local via browser.</p>
+  <p>NutriVida - Projeto Escolar de Nutrição e Saúde</p>
+  <p class="miudo">Os dados ficam salvos apenas neste navegador. Protótipo educacional.</p>
 </footer>
 
 <script src="script.js"></script>
