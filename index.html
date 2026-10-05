@@ -3,127 +3,97 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>NutriVida - Emagrecimento e Saúde</title>
-  <meta name="description" content="Plataforma de apoio para reeducação alimentar, dietas equilibradas e acompanhamento de peso.">
+  <title>NutriVida - Planejamento Alimentar e Saúde</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<header class="topo">
-  <div class="faixa">
-    <p class="marca">NutriVida</p>
-    <nav>
-      <a href="#problema">O Desafio</a>
-      <a href="#cadastrar">Cadastrar Meta/Dieta</a>
-      <a href="#mural">Mural de Acompanhamento</a>
-    </nav>
-  </div>
-</header>
+  <!-- CABEÇALHO DO SITE -->
+  <header class="header">
+    <div class="logo">
+      <span class="logo-icon">🥗</span>
+      <h1>NutriVida</h1>
+    </div>
+    <p class="tagline">Seu aliado no planejamento de dietas e combate à obesidade</p>
+  </header>
 
-<section class="capa">
-  <img src="imagens/capa.jpg" alt="Prato saudável com salada colorida e alimentos frescos">
-  <div class="capa-texto">
-    <h1>Transforme sua saúde com planejamento e constância</h1>
-    <p>Ajudamos você a alcançar o peso ideal com reeducação alimentar prática e acompanhamento real.</p>
-    <a class="botao" href="#cadastrar">Começar agora</a>
-  </div>
-</section>
+  <!-- CONTAINER PRINCIPAL -->
+  <main class="container">
 
-<main>
+    <!-- SEÇÃO DO FORMULÁRIO -->
+    <section class="card-form">
+      <h2>Cadastrar Nova Refeição / Meta</h2>
+      <p class="form-desc">Preencha os dados abaixo para organizar seu plano alimentar diário.</p>
 
-<section id="problema" class="bloco">
-  <h2>O Desafio</h2>
-  <p class="largura-texto">Muitas pessoas querem emagrecer, mas iniciam dietas restritivas sem orientação profissional, acabam desistindo por frustração e recuperam o peso perdido.</p>
-  <p class="largura-texto"><b>Quem sofre com isso:</b> Jovens e adultos que tentam emagrecer sozinhos e se perdem em meio a tantas informações desencontradas na internet.</p>
-  <p class="largura-texto"><b>Onde acontece:</b> No dia a dia de quem busca uma vida mais saudável em nossa comunidade.</p>
-  <div class="galeria">
-    <figure>
-      <img src="imagens/foto1.jpg" alt="Alimentos frescos e naturais em uma mesa de cozinha">
-      <figcaption>Refeições balanceadas priorizando comida de verdade.</figcaption>
-    </figure>
-    <figure>
-      <img src="imagens/foto2.jpg" alt="Pessoa praticando atividade física ao ar livre">
-      <figcaption>Apoio à constância em hábitos saudáveis diários.</figcaption>
-    </figure>
-  </div>
-</section>
+      <form id="dietForm">
+        <div class="form-group">
+          <label for="userName">Seu Nome:</label>
+          <input type="text" id="userName" placeholder="Ex: Ana Silva" required>
+        </div>
 
-<section class="bloco">
-  <h2>Os Números do Projeto</h2>
-  <p class="largura-texto">Indicador: número de registros de metas e dietas cadastradas por usuários em 4 semanas.</p>
-  <div class="painel" id="painel"></div>
-</section>
+        <div class="form-group">
+          <label for="mealTitle">Título da Refeição ou Meta:</label>
+          <input type="text" id="mealTitle" placeholder="Ex: Café da Manhã Proteico" required>
+        </div>
 
-<section id="cadastrar" class="bloco">
-  <h2>Registrar Meta ou Dieta</h2>
-  <form id="formulario" class="formulario">
-    <div class="campo">
-      <label for="tituloDaAcao">Título da Meta ou Refeição</label>
-      <input type="text" id="tituloDaAcao" maxlength="80" required placeholder="Ex: Dieta Low Carb Semanal">
-    </div>
-    <div class="campo">
-      <label for="categoria">Categoria</label>
-      <select id="categoria" required>
-        <option>Emagrecimento</option>
-        <option>Reeducação</option>
-        <option>Exercício</option>
-        <option>Hidratação</option>
-      </select>
-    </div>
-    <div class="campo">
-      <label for="local">Foco / Refeição</label>
-      <input type="text" id="local" maxlength="80" required placeholder="Ex: Almoço / Café da manhã">
-    </div>
-    <div class="campo">
-      <label for="quantasPessoasParticipar">Calorias Estimadas (kcal)</label>
-      <input type="number" id="quantasPessoasParticipar" min="0" step="1" required placeholder="Ex: 500">
-    </div>
-    <div class="campo largo">
-      <label for="oQueFoiFeito">Descrição detalhada</label>
-      <textarea id="oQueFoiFeito" rows="3" maxlength="300" required placeholder="Descreva os alimentos, porções ou metas cumpridas..."></textarea>
-    </div>
-    <button type="submit" class="botao">Salvar Registro</button>
-    <p id="aviso" class="aviso" role="status"></p>
-  </form>
-</section>
+        <div class="form-group">
+          <label for="mealCategory">Tipo de Refeição:</label>
+          <select id="mealCategory" required>
+            <option value="">Selecione...</option>
+            <option value="Café da Manhã">Café da Manhã</option>
+            <option value="Almoço">Almoço</option>
+            <option value="Lanche da Tarde">Lanche da Tarde</option>
+            <option value="Jantar">Jantar</option>
+            <option value="Ceia">Ceia</option>
+          </select>
+        </div>
 
-<section id="mural" class="bloco">
-  <h2>Mural de Acompanhamento</h2>
-  <div class="ferramentas">
-    <div class="ferramenta">
-      <label for="busca">Buscar</label>
-      <input type="text" id="busca" placeholder="digite uma palavra">
-    </div>
-    <div class="ferramenta">
-      <label for="filtro">Categoria</label>
-      <select id="filtro">
-        <option value="todas">Todas</option>
-        <option>Emagrecimento</option>
-        <option>Reeducação</option>
-        <option>Exercício</option>
-        <option>Hidratação</option>
-      </select>
-    </div>
-    <div class="ferramenta">
-      <label for="exportar">Dados</label>
-      <div class="grupo-botoes">
-        <button type="button" id="exportar" class="botao-fino">Baixar</button>
-        <label for="importar" class="botao-fino">Carregar</label>
-        <input type="file" id="importar" accept="application/json" hidden>
-        <button type="button" id="limpar" class="botao-fino perigo">Apagar tudo</button>
+        <div class="form-group">
+          <label for="mealDetails">Alimentos e Porções:</label>
+          <textarea id="mealDetails" rows="3" placeholder="Ex: 2 ovos mexidos, 1 fatia de pão integral, 1 xícara de café sem açúcar..." required></textarea>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group col">
+            <label for="calories">Calorias Estimadas (kcal):</label>
+            <input type="number" id="calories" min="0" placeholder="Ex: 350" required>
+          </div>
+
+          <div class="form-group col">
+            <label for="planDate">Data do Planejamento:</label>
+            <input type="date" id="planDate" required>
+          </div>
+        </div>
+
+        <button type="submit" id="btnSubmit">Salvar Refeição</button>
+      </form>
+    </section>
+
+    <!-- SEÇÃO DA LISTA DE REFEIÇÕES -->
+    <section class="card-list">
+      <div class="list-header">
+        <h2>Plano Alimentar Cadastrado</h2>
+        <span id="mealCount" class="badge">0 refeições</span>
       </div>
-    </div>
-  </div>
-  <div id="lista" class="lista"></div>
-</section>
 
-</main>
+      <!-- PAINEL DE IMPACTO METRICAS -->
+      <div class="impact-metric">
+        🎯 <strong>Impacto em Saúde (ODS 3):</strong> <span id="totalCalories">0</span> kcal totais planejadas!
+      </div>
 
-<footer class="rodape">
-  <p>NutriVida - Projeto Escolar de Nutrição e Saúde</p>
-  <p class="miudo">Os dados ficam salvos apenas neste navegador. Protótipo educacional.</p>
-</footer>
+      <!-- LISTA ONDE OS CARDS SERÃO INSERIDOS VIA JS -->
+      <div id="mealList" class="meals-grid">
+        <p class="empty-msg">Nenhuma refeição cadastrada ainda. Preencha o formulário acima!</p>
+      </div>
+    </section>
 
-<script src="script.js"></script>
+  </main>
+
+  <!-- RODAPÉ -->
+  <footer class="footer">
+    <p>Projeto NutriVida — Promovendo Saúde e Bem-Estar (ODS 3 ONU)</p>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
